@@ -1,0 +1,14 @@
+# Description: interface texte pour git
+# URL: http://jonas.nitro.dk/tig/
+# Maintainer: Jonas Fonseca
+# Packager: Yannic Arnoux
+
+name=tig
+version=2.1.1
+release=1
+source=(http://jonas.nitro.dk/tig/releases/tig-$version.tar.gz)
+build() {
+  cd $name-$version
+  make prefix=$PKG
+  make install prefix=$PKG
+}
